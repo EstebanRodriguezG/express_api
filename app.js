@@ -84,5 +84,5 @@ app.delete('/v1/explorers/:id', (req, res)=>{
 
 app.listen(port, ()=>{
 
-    console.log(`Example app listening port ${port}`)
+    console.log(`API listening port ${port}`)
 })
