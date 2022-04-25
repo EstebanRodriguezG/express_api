@@ -29,16 +29,38 @@ app.get('/v1/explorers/:id',(req, res)=>{
 // Metodo POST usado para insertar Datos
 app.post('/v1/explorers', (req, res)=>{
 
-    // Agregar aqui la logica de persistencia de Datos
+    // parametros
+
+    const params = req.params()
+
+    // Agregar aqui la logica para persistencia de Datos
 
     console.log(`POST Explorers V1 API ${new Date()}`)
 
     console.log(req.body)
 
-    res.status(201).json({result: "success", message: "Creado Existosamente"})
+    res.status(200).json({result: "success", message: "Creado Existosamente"})
 
 
 });
+
+// Metodo PUT usado para insertar Datos
+app.put('/v1/explorers/:id', (req, res)=>{
+
+    console.log(`PUT Explorers V1 API ${new Date()}`)
+
+    // Query Params
+
+    const id = req.params.id
+
+    // Agregar aqui la logica para actualizar datos
+    // ...
+
+    console.log(req.body) // campos a actualizar
+
+    res.status(200).json({result: "success", message: `Id: ${id} Actualizado Existosamente`})
+
+})
 
 
 
