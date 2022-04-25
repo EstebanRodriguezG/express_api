@@ -56,11 +56,29 @@ app.put('/v1/explorers/:id', (req, res)=>{
     // Agregar aqui la logica para actualizar datos
     // ...
 
-    console.log(req.body) // campos a actualizar
+    console.log(req.body) // campos o parametros a actualizar
 
     res.status(200).json({result: "success", message: `Id: ${id} Actualizado Existosamente`})
 
 })
+
+// Metodo DELETE usado para eliminar Datos
+app.delete('/v1/explorers/:id', (req, res)=>{
+
+    console.log(`DELETE Explorers V1 API ${new Date()}`)
+
+    // Query Params
+
+    const id = req.params.id
+
+    // Agregar aqui la logica para eliminar datos
+    // ...
+
+    res.status(200).json({result: "success", message: `Eliminado Existosamente`})
+
+})
+
+
 
 
 
